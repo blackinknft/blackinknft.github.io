@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'VintageRumble'; 
+    src: url('../images/Vintage Rumble.otf'); 
+}
+
+.header {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__logo {
+    width: 9vw;
+    object-fit: contain;
+    margin: 0 2vw;
+    margin-top: 5vw;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    color: white;
+}
+
+.header__optionLineOne {
+    font-family: 'VintageRumble';
+    font-size: 3vw;
+}
+
+.header__icon {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+
+
+
