@@ -68,7 +68,7 @@ const Home = () => {
 
                 <Row justify="space-around" style= {{marginBottom: '14vh'}}>
                     <div className='SmallFont'>                            
-                        Black Ink is an exclusive NFT collection of 3000+ ink splatters. Holders of black ink will gain access to a unique auto minter, aiming to create the most efficient mint process possible.
+                        Black Ink is a collection of 999 NFTs on the Solana blockchain.  You will gain access to our minting, sniping and AI bots. Also, holders will verify to be able to join the Black Ink DAO. Things will get exciting from then on...
                     </div>
                 </Row>
 
@@ -81,23 +81,45 @@ const Home = () => {
                 <Row justify="space-around" style={{marginBottom: '7vh'}}>
                     <Col span={6}>
                             <div className='CardQ'> 
-                                What more do holders get?
+                                Supply?
                             </div>
 
                             <div className='CardA'> 
-                                At Black Ink we prioritize our community. Our goal is to create a cartridge inks where we can all share ideas with one another, and ride to the moon together. Your thoughts are our actions. We are committed to adding long term value to our holders. 
+                                Given the fact we want our DAO to be as tightknit as possible there will only be 999 Black Ink NFTs available at mint.
                             </div>
                     </Col>
                     <Col span={6}>
                             <div className='CardQ'> 
-                                What is the minting cost?
+                                What is the mint price?
                             </div>
 
                             <div className='CardA'>
-                                Each black ink will cost 1.1  sol
+                                We would like to reward early supporters and so our mint price will be 0.7 SOL for the first 300 (Whitelist) This may change, then 1 SOL for the remaining 699 NFTs 
                             </div>
                     </Col>
-    
+                </Row>
+
+                <Row justify="space-around" style={{marginBottom: '7vh'}}>
+
+                    <Col span={6}>
+                            <div className='CardQ'> 
+                                Mint Date?
+                            </div>
+
+                            <div className='CardA'>
+                                We have yet to decide on a mint date, largely due to current market and SOL conditions. We all update the discord on that decision in due course
+                            </div>
+                    </Col>
+
+                    <Col span={6}>
+                            <div className='CardQ'> 
+                                Wen Secondary?
+                            </div>
+
+                            <div className='CardA'>
+                                We will be putting in an application to be listed solely on Magic Eden, we understand the traffic that is seen on ME is far greater than any other platform
+                            </div>
+                    </Col>
                 </Row>
             
             </div>    
