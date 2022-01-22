@@ -94,7 +94,7 @@ const Home = () => {
                             </div>
 
                             <div className='CardA'>
-                                We would like to reward early supporters and so our mint price will be 0.7 SOL for the first 300 (Whitelist) This may change, then 1 SOL for the remaining 699 NFTs 
+                                We would like to reward early supporters and so our mint price will be 0.7 SOL for the first 300 (Whitelist) This may change, then 1 SOL for the remaining 699 NFTs. 
                             </div>
                     </Col>
                 </Row>
@@ -107,7 +107,7 @@ const Home = () => {
                             </div>
 
                             <div className='CardA'>
-                                We have yet to decide on a mint date, largely due to current market and SOL conditions. We all update the discord on that decision in due course
+                                We have yet to decide on a mint date, largely due to current market and SOL conditions. We all update the discord on that decision in due course.
                             </div>
                     </Col>
 
@@ -117,7 +117,7 @@ const Home = () => {
                             </div>
 
                             <div className='CardA'>
-                                We will be putting in an application to be listed solely on Magic Eden, we understand the traffic that is seen on ME is far greater than any other platform
+                                We will be putting in an application to be listed solely on Magic Eden, we understand the traffic that is seen on ME is far greater than any other platform.
                             </div>
                     </Col>
                 </Row>
