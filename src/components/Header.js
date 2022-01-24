@@ -36,6 +36,12 @@ const Header = () => {
                     </div>
                 </Link>
 
+                <Link to="/connect">
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Connect to Phantom</span>
+                    </div>
+                </Link>
+
             </div>
 
             <div className='header__icon'>

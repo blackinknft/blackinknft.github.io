@@ -3,6 +3,8 @@ import { Col, Row } from 'antd';
 import 'antd/dist/antd.css';
 import "../css/Home.css";
 import "../css/Header.css";
+import { Link } from 'react-router-dom';
+
 import {TwitterOutlined} from '@ant-design/icons';
 
 const Home = () => {
@@ -38,6 +40,12 @@ const Home = () => {
                             <span className="header__optionLineOne">FAQ</span>
                         </div>
                     </a>
+
+                    <Link to="/connect">
+                        <div className="header__option">
+                            <span className="header__optionLineOne">Connect to Phantom</span>
+                        </div>
+                    </Link>
 
                 </div>
 
