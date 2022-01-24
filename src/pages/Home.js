@@ -67,9 +67,15 @@ const Home = () => {
                 </Row>
 
                 <Row justify="space-around" style= {{marginBottom: '14vh'}}>
-                    <div className='SmallFont'>                            
-                        Black Ink is a collection of 999 NFTs on the Solana blockchain.  You will gain access to our minting, sniping and AI bots. Also, holders will verify to be able to join the Black Ink DAO. Things will get exciting from then on...
-                    </div>
+                    <Col span={9}>
+                        <div className='SmallFont'>                            
+                            Black Ink is a collection of 999 NFTs on the Solana blockchain.  You will gain access to our minting, sniping and AI bots. Also, holders will verify to be able to join the Black Ink DAO. Things will get exciting from then on...
+                        </div> 
+                    </Col>
+
+                    <Col span={9}>
+                        <img src="NewCollection.png" alt="collection"></img>
+                    </Col>
                 </Row>
 
                 <img id="roadmap" src="BlackInkRoadMap.png" alt="roadmap"></img>
@@ -94,7 +100,7 @@ const Home = () => {
                             </div>
 
                             <div className='CardA'>
-                                We would like to reward early supporters and so our mint price will be 0.7 SOL for the first 300 (Whitelist) This may change, then 1 SOL for the remaining 699 NFTs. 
+                                We would like to reward early supporters and so our mint price will be 0.7 SOL for the first 400 (Whitelist) This may change, then 1 SOL for the remaining 699 NFTs. 
                             </div>
                     </Col>
                 </Row>
