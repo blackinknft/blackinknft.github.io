@@ -3,12 +3,13 @@ import { Container, Snackbar } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Alert from '@material-ui/lab/Alert';
 import styled from 'styled-components';
+import Cookies from 'universal-cookie';
 
 import { WalletDialogButton } from '@solana/wallet-adapter-material-ui';
 import { useWallet } from '@solana/wallet-adapter-react';
 
-import { getParsedNftAccountsByOwner, isValidSolanaAddress, createConnectionConfig } from "@nfteyez/sol-rayz";
-import { Connection, clusterApiUrl, LAMPORTS_PER_SOL } from "@solana/web3.js";
+import { getParsedNftAccountsByOwner, createConnectionConfig } from "@nfteyez/sol-rayz";
+import { clusterApiUrl } from "@solana/web3.js";
 
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
@@ -27,12 +28,8 @@ function Connect() {
 
     const [publicKey, setPublicKey] = useState(null)
     const [nfts, setNfts] = useState([])
-    const [hasBlackInk, setHasBlacInk] = useState([])
+    const [hasBlackInk, setHasBlackInk] = useState(false)
 
-    useEffect(() => {
-        localStorage.removeItem("verified_key");
-    }, [])
- 
     useEffect(() => {
         verifyHolding();
     }, [nfts])
@@ -45,7 +42,7 @@ function Connect() {
         async function getNft() {
             try {
                 const address = publicKey;
-                const connect =  createConnectionConfig(clusterApiUrl("devnet"));
+                const connect =  createConnectionConfig(clusterApiUrl(process.env.REACT_APP_SOLANA_NETWORK));
          
                 const nftArray = await getParsedNftAccountsByOwner({
                     publicAddress: address,
@@ -55,11 +52,8 @@ function Connect() {
     
                 setNfts(nftArray);
     
-                return nftArray
-    
               } catch (error) {
                     console.log("Error thrown, while fetching NFTs", error.message);
-                    return [];
               }
         }
 
@@ -68,43 +62,27 @@ function Connect() {
     }, [publicKey])
 
 
-    // const getNfts = async () => {
-    //     try {
-    //         // const address = "38wbniAswchcZu913arzNZSFNzC46uj2tL174JPbjT21";
-    //         const address = "2i3ANPvhABfF1oGi1BWv7Dp9Hr4q8YfLTR7VH9G9B1yZ";
-    //         const connect =  createConnectionConfig(clusterApiUrl("devnet"));
-    //         const valid_address = isValidSolanaAddress(address);
-    //         console.log('valid_address ' + valid_address)
-    //         console.log('connect ', connect)
-    //         const nftArray = await getParsedNftAccountsByOwner({
-    //             publicAddress: address,
-    //             connection: connect,
-    //             serialization: true,
-    //           });
-
-    //         setNfts(nftArray);
-
-    //         return nftArray
-
-    //       } catch (error) {
-    //             console.log("Error thrown, while fetching NFTs", error.message);
-    //             return [];
-    //       }
-    // }
-
-    const setCookie = () => {
-        localStorage.setItem("verified_key", 1);
+    const setCookie = (value) => {
+        const cookies = new Cookies();
+        let t = new Date();
+        t.setSeconds(t.getSeconds() + 1800);
+        cookies.set('verified', value, {expires: t});
       };
 
     const verifyHolding = async () => {
-        const datas = nfts;
-        const hasBlackInk = datas.some((nft) => {
+       
+        const hasBlackInk = nfts.some((nft) => {
             return nft.mint === process.env.REACT_APP_MINT_ID}
         )
 
+        console.log("Here", hasBlackInk)
+
         if (hasBlackInk) {
-            setCookie();
-            setHasBlacInk(true);
+            setCookie(1);
+            setHasBlackInk(true);
+        }
+        else {
+          setCookie(0);
         }
     }
 
@@ -119,13 +97,12 @@ function Connect() {
             return <ConnectButton>Connect Wallet</ConnectButton>
         }
         else {
-            console.log(localStorage.getItem("verified_key"))
-
+            
             if (!hasBlackInk) {
                 return <div>Verified failed</div>
             }
             else {
-                return <div>You already connect to your wallet successfully. Open your black ink mint bot and start minting</div>
+                return <div id="verified">You already connect to your wallet successfully. Open your black ink mint bot and start minting</div>
             }
         }
     }
@@ -136,13 +113,6 @@ function Connect() {
         <Paper
           style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
         > 
-          {/* {!wallet.connected ? (
-            <ConnectButton>Connect Wallet</ConnectButton>
-          ) : (
-            <>
-              <div>You already connect to your wallet. Open your black ink mint bot and start minting</div>
-            </>
-          )} */}
           {renderButton()}
         </Paper>
       </Container>
