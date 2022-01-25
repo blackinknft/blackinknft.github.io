@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Alert from '@material-ui/lab/Alert';
 import styled from 'styled-components';
 import Cookies from 'universal-cookie';
+import './Connect.css'
 
 import { WalletDialogButton } from '@solana/wallet-adapter-material-ui';
 import { useWallet } from '@solana/wallet-adapter-react';
@@ -99,10 +100,22 @@ function Connect() {
         else {
             
             if (!hasBlackInk) {
-                return <div>Verified failed</div>
+              return (
+                <div>
+                  <div>Verify failed.</div> 
+                  
+                  <div>You are currently not holding any Black Ink NFTs 😭</div> 
+                </div>
+                )
             }
             else {
-                return <div id="verified">You already connect to your wallet successfully. Open your black ink mint bot and start minting</div>
+                return (
+                <div>
+                  <div>You have connected to your wallet successfully.</div> 
+                  
+                  <div>Open your Black Ink Minter bot and start minting 🚀</div> 
+                </div>
+                )
             }
         }
     }
@@ -113,6 +126,7 @@ function Connect() {
         <Paper
           style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
         > 
+          <img src="BlackInk.png" alt="Black Ink"></img>
           {renderButton()}
         </Paper>
       </Container>

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'RockinSoda'; 
+    src: url('../images/Rockinsoda.ttf'); 
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    background-image: url("../images/bg.png"); 
+    background-repeat: repeat;
+    background-position: center;
+    font-family: 'RockinSoda';
+    font-size: 1.75vw;
+}
