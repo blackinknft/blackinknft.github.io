@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.57113ac7.chunk.css",
-    "main.js": "/static/js/main.eab84ddb.chunk.js",
-    "main.js.map": "/static/js/main.eab84ddb.chunk.js.map",
+    "main.css": "/static/css/main.a3ff736e.chunk.css",
+    "main.js": "/static/js/main.c04400b0.chunk.js",
+    "main.js.map": "/static/js/main.c04400b0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.fa642e65.js",
     "runtime-main.js.map": "/static/js/runtime-main.fa642e65.js.map",
     "static/css/2.7393f959.chunk.css": "/static/css/2.7393f959.chunk.css",
@@ -12,16 +12,16 @@
     "static/js/3.7ce3941d.chunk.js.map": "/static/js/3.7ce3941d.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.7393f959.chunk.css.map": "/static/css/2.7393f959.chunk.css.map",
-    "static/css/main.57113ac7.chunk.css.map": "/static/css/main.57113ac7.chunk.css.map",
+    "static/css/main.a3ff736e.chunk.css.map": "/static/css/main.a3ff736e.chunk.css.map",
     "static/js/2.6919bb6e.chunk.js.LICENSE.txt": "/static/js/2.6919bb6e.chunk.js.LICENSE.txt",
-    "static/media/Connect.css": "/static/media/bg.67bd8648.png",
+    "static/media/Connect.css": "/static/media/Rockinsoda.cdcd2b7e.ttf",
     "static/media/Header.css": "/static/media/Vintage Rumble.acf6fafe.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.fa642e65.js",
     "static/css/2.7393f959.chunk.css",
     "static/js/2.6919bb6e.chunk.js",
-    "static/css/main.57113ac7.chunk.css",
-    "static/js/main.eab84ddb.chunk.js"
+    "static/css/main.a3ff736e.chunk.css",
+    "static/js/main.c04400b0.chunk.js"
   ]
 }
